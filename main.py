@@ -4,10 +4,9 @@
 # comment/uncomment any of the following code to try out other example bots.
 
 from fastapi_poe import make_app
-from modal import Image, Stub, asgi_app
+from modal import Image, Secret, Stub, asgi_app
 
 from auto_maestro import AutoMaestro
-
 
 bot = AutoMaestro()
 
@@ -22,7 +21,7 @@ image = Image.debian_slim().pip_install_from_requirements("requirements.txt")
 stub = Stub("poe-bot-quickstart")
 
 
-@stub.function(image=image)
+@stub.function(image=image, secret=Secret.from_name("replicate-api-token"))
 @asgi_app()
 def fastapi_app():
     app = make_app(bot, allow_without_key=True)
