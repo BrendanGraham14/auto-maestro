@@ -15,16 +15,10 @@ skip_gitignore = true
 name = ""
 version = ""
 description = ""
-authors = [
-    {name = "Brendan Graham", email = "bgraham@quora.com"},
-]
-dependencies = [
-    "fastapi-poe==0.0.14",
-    "replicate",
-    "modal-client>=0.45.1163",
-]
-requires-python = ">=3.9"
-license = {text = "none"}
+authors = [{ name = "Brendan Graham", email = "bgraham@quora.com" }]
+dependencies = ["fastapi-poe==0.0.14", "replicate", "modal-client"]
+requires-python = ">=3.11"
+license = { text = "none" }
 
 [build-system]
 requires = ["pdm-backend"]
