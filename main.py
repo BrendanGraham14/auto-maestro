@@ -6,27 +6,10 @@
 from fastapi_poe import make_app
 from modal import Image, Stub, asgi_app
 
-from battlebot import BattleBot
-from catbot import CatBot
-from chatgpt_allcapsbot import ChatGPTAllCapsBot
-from echobot import EchoBot
+from auto_maestro import AutoMaestro
 
-# Echo bot is a very simple bot that just echoes back the user's last message.
-bot = EchoBot()
 
-# A sample bot that showcases the capabilities the protocol provides. Please see the
-# following link for the full set of available message commands:
-# https://github.com/poe-platform/api-bot-tutorial/blob/main/catbot/catbot.md
-# bot = CatBot()
-
-# A bot that wraps Poe's ChatGPT bot, but makes all messages ALL CAPS.
-# Good simple example of calling on another bot using Poe's API.
-# bot = ChatGPTAllCapsBot()
-
-# A bot that calls two different bots (by default Sage and Claude-Instant) and
-# shows the results. Can customize what bots to call by including in message a string
-# of the form (botname1 vs botname2)
-# bot = BattleBot()
+bot = AutoMaestro()
 
 # Optionally add your Poe API key here. You can go to https://poe.com/create_bot?api=1 to generate
 # one. We strongly recommend adding this key for a production bot to prevent abuse,
