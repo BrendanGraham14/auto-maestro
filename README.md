@@ -1,5 +1,3 @@
-# Poe API Bot tutorial
+AutoMaestro is a conversational text-to-music and music-to-music API bot for Poe.
 
-This is the companion repository to the Poe API bot
-[quick start](https://developer.poe.com/api-bots/quick-start). Please follow that guide
-for instructions on how to use this repository.
+https://poe.com/AutoMaestro
